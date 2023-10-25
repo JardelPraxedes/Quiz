@@ -24,14 +24,14 @@
     const [pontuacao, setpontuacao] = useState(0);
     const [questaoRespondida, setQuestaoRespondida] = useState(false);
  
-    const identificarClique = (selectedAnswer) =>  {
+    const identificarClique = (respostaSelecionada) =>  {
       if (questaoRespondida) {
         return;
       }
 
-      setalternativas(selectedAnswer);
+      setalternativas(respostaSelecionada);
 
-      if (selectedAnswer === questions[questoesCorretas].respostaCorreta) {
+      if (respostaSelecionada === questions[questoesCorretas].respostaCorreta) {
         setpontuacao(pontuacao + 1);
       }
 
@@ -81,7 +81,7 @@
           <div className='final'>
             <p>Quiz concluído! Você acertou {pontuacao} de {questions.length} perguntas.</p>
             <button onClick={reiniciarQuiz} id='reiniciar'>Reiniciar</button>
-            <p id='rodape'>&copy; Praxedes</p>
+            <p id='rodape'>&copy; Projeto_Quiz</p>
           </div>
         )}
       </div>
