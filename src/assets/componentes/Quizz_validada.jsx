@@ -44,7 +44,7 @@
   
           alert(`Você acertou ${pontuacao} de ${questions.length} perguntas!`);
         }
-      }, 2000);
+      }, 6000);
 
       
       setQuestaoRespondida(true);
